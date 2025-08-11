@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Delicious Recipes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Side Navigation -->
+    <div class="side-nav">
+        <div class="logo">
+            <h2>Foodie</h2>
+            <p class="tagline">Discover Delicious Recipes</p>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#" class="search-link">
+                    <i class="fas fa-search"></i>
+                    <span>Find Recipes</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="categories-link">
+                    <i class="fas fa-utensils"></i>
+                    <span>Recipe Types</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="area-link">
+                    <i class="fas fa-globe"></i>
+                    <span>World Cuisines</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="ingredients-link">
+                    <i class="fas fa-carrot"></i>
+                    <span>Ingredients</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Get in Touch</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Search Section -->
+        <div class="search-section d-none">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="search-by-name">
+                            <h3>Find by Recipe Name</h3>
+                            <input type="text" class="form-control" id="searchByName" placeholder="Enter recipe name...">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="search-by-first-letter">
+                            <h3>Find by First Letter</h3>
+                            <input type="text" class="form-control" id="searchByFirstLetter" placeholder="Enter first letter...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories Section -->
+        <div class="categories-section d-none">
+            <div class="container">
+                <h2 class="text-center mb-4">Recipe Types</h2>
+                <div class="row" id="categoriesContainer">
+                    <!-- Categories will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Area Section -->
+        <div class="area-section d-none">
+            <div class="container">
+                <h2 class="text-center mb-4">World Cuisines</h2>
+                <div class="row" id="areasContainer">
+                    <!-- Areas will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Ingredients Section -->
+        <div class="ingredients-section d-none">
+            <div class="container">
+                <h2 class="text-center mb-4">Main Ingredients</h2>
+                <div class="row" id="ingredientsContainer">
+                    <!-- Ingredients will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div class="contact-section d-none">
+            <div class="container">
+                <h2 class="text-center mb-4">Get in Touch</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" class="form-control" id="phone" placeholder="Your Phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submitBtn" disabled>Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Recipes Container -->
+        <div class="recipes-container">
+            <div class="container">
+                <div class="row" id="mealsContainer">
+                    <!-- Recipes will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Recipe Details Modal -->
+        <div class="modal fade" id="mealDetailsModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mealName"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="" alt="" id="mealImage" class="img-fluid">
+                            </div>
+                            <div class="col-md-6">
+                                <div id="mealDetails">
+                                    <!-- Recipe details will be loaded here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html> 
