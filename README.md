@@ -45,6 +45,10 @@ A modern and responsive website for exploring food recipes from around the world
 
 This project uses [TheMealDB API](https://www.themealdb.com/api.php) for all recipe data. The API is free to use and doesn't require an API key.
 
+##  Demo
+
+ [Live Demo on GitHub Pages](https://food-ten-khaki.vercel.app/)
+
 ## Getting Started
 
 1. Clone the repository
@@ -71,5 +75,6 @@ This project uses [TheMealDB API](https://www.themealdb.com/api.php) for all rec
 - Real-time validation feedback
 
 ## Contributing
+
 
 Feel free to submit issues and enhancement requests! 
